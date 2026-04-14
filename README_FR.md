@@ -93,6 +93,11 @@ Les contributions sont les bienvenues :
 
 Ajouter un fichier `app/src/main/res/values-XX/strings.xml` et traduire les clés `rn2c_*`.
 
+## Contributeurs
+
+- **Pierroons** — Créateur, développement, infrastructure
+- **Claude Code (Anthropic)** — Pair-programming IA, architecture, pipeline audio, hardening serveur
+
 ## Licence
 
 GPL-3.0 — voir [LICENSE](LICENSE)
