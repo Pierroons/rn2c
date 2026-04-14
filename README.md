@@ -1,3 +1,5 @@
+**[Lire en français](README_FR.md)**
+
 # RN2C — Radio Numérique Contre la Censure
 *(Digital Radio Against Censorship)*
 
