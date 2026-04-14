@@ -52,6 +52,11 @@ RN2C APK (~55 MB)
 └── Update System             — check + download + forced install
 ```
 
+## Documentation
+
+- [Whitepaper (FR)](docs/RN2C_Whitepaper_FR.docx) — Project overview
+- [Technical Documentation (FR)](docs/RN2C_Technical_Doc_FR.docx) — Architecture, code, developer guide
+
 ## Current status
 
 RN2C is currently configured to connect to a specific Mumble server via Tor (hardcoded .onion address). The goal is to make it **customizable and modular** so anyone can deploy their own server and instance.
