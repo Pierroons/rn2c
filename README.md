@@ -1,27 +1,28 @@
 # RN2C — Radio Numérique Contre la Censure
+*(Digital Radio Against Censorship)*
 
-**Communication vocale anonyme via Tor.** Un seul APK, zéro configuration.
+**Anonymous voice communication over Tor.** One APK, zero configuration.
 
-RN2C combine un client Mumble ([Humla](https://github.com/acomminos/Humla)) et le réseau Tor ([tor-android](https://github.com/nicholasnjr/tor-android)) en une application Android autonome. L'utilisateur installe, choisit un pseudo, et parle — chiffré, anonyme, résistant à la censure.
+RN2C combines a Mumble client ([Humla](https://github.com/acomminos/Humla)) and the Tor network ([tor-android](https://github.com/nicholasnjr/tor-android)) into a standalone Android application. Install, pick a username, and talk — encrypted, anonymous, censorship-resistant.
 
-## Fonctionnalités
+## Features
 
-- **One-tap** : connexion automatique via Tor, aucune configuration requise
-- **Anonymat** : 3 modes d'identité (anonyme, temporaire, permanent)
-- **Chiffrement** : TLS + Opus via le protocole Mumble
-- **Anti-censure** : le serveur est un hidden service Tor (.onion)
-- **Annulation d'écho** : AEC Android natif + Speex echo suppress
-- **Modification de voix** : pitch shift pour l'anonymat vocal
-- **Mise à jour automatique** : vérification au lancement, installation forcée
-- **Multilingue** : FR / EN, sélection par drapeaux
-- **Gestion des rôles** : utilisateur / modérateur / administrateur depuis l'app
-- **Auto-enregistrement** : verrouiller son pseudo sans intervention d'un modérateur
+- **One-tap** : automatic connection via Tor, no configuration needed
+- **Anonymity** : 3 identity modes (anonymous, temporary, permanent)
+- **Encryption** : TLS + Opus via the Mumble protocol
+- **Censorship-resistant** : the server is a Tor hidden service (.onion)
+- **Echo cancellation** : native Android AEC + Speex echo suppress
+- **Voice changer** : pitch shift for vocal anonymity
+- **Forced auto-update** : check on launch, blocking download screen
+- **Multilingual** : FR / EN, flag selection on home screen
+- **Role management** : user / moderator / admin from the app
+- **Self-registration** : lock your username without moderator intervention
 
-## Installation
+## Install
 
-Télécharger la dernière version depuis les [Releases](../../releases).
+Download the latest version from [Releases](../../releases).
 
-Prérequis : Android 7.0+ (API 24)
+Requirements: Android 7.0+ (API 24)
 
 ## Build
 
@@ -31,9 +32,9 @@ cd rn2c
 ./gradlew assembleFossDebug
 ```
 
-L'APK se trouve dans `app/build/outputs/apk/foss/debug/`
+APK output: `app/build/outputs/apk/foss/debug/`
 
-### Prérequis de build
+### Build requirements
 
 - JDK 21
 - Android SDK 36
@@ -43,43 +44,55 @@ L'APK se trouve dans `app/build/outputs/apk/foss/debug/`
 ## Architecture
 
 ```
-RN2C APK (~55 Mo)
-├── Client Mumble (Humla)     — protocole Mumble 1.2.x, codec Opus
-├── Tor (tor-android)         — proxy SOCKS5 embarqué
-├── Préprocesseur Speex       — débruitage, AGC, AEC, déréverbération
-├── UI RN2C                   — thème cyberpunk, PTT, gestion des rôles
-└── Système de MAJ            — vérification + téléchargement + install forcée
+RN2C APK (~55 MB)
+├── Mumble Client (Humla)     — Mumble 1.2.x protocol, Opus codec
+├── Tor (tor-android)         — embedded SOCKS5 proxy
+├── Speex Preprocessor        — denoise, AGC, AEC, dereverberation
+├── RN2C UI                   — cyberpunk theme, PTT, role management
+└── Update System             — check + download + forced install
 ```
 
-## Documentation
+## Current status
 
-- [Whitepaper (FR)](docs/RN2C_Whitepaper_FR.pdf) — Présentation du projet
-- [Documentation technique (FR)](docs/RN2C_Technical_Doc_FR.pdf) — Architecture, code, guide dev
+RN2C is currently configured to connect to a specific Mumble server via Tor (hardcoded .onion address). The goal is to make it **customizable and modular** so anyone can deploy their own server and instance.
 
-## Contribuer
+## Roadmap
 
-Les contributions sont les bienvenues :
+### Short term
+- Make the .onion address user-configurable
+- Update system via Tor hidden service (instead of clearnet)
+- Enhanced .onion web portal (blog, forum, IRC, wiki)
 
-1. Fork le repo
-2. Crée une branche (`git checkout -b feature/ma-feature`)
-3. Commit (`git commit -m "Ajout de ma feature"`)
-4. Push (`git push origin feature/ma-feature`)
-5. Ouvre une Pull Request
+### Medium term — RN2C Host
+- **RN2C Host** : embedded Mumble server on the phone (uMurmur cross-compiled via NDK) + automatic Tor hidden service + built-in client
+- **RN2C Client** : lightweight version — paste a .onion address and a username, that's it
+- Zero dependency on any external server — the host's phone becomes the server
 
-### Traductions
+### Long term
+- Fully decentralized architecture
+- Multi-server support (.onion list)
+- End-to-end encryption on top of the Mumble protocol
 
-Ajouter un fichier `app/src/main/res/values-XX/strings.xml` et traduire les clés `rn2c_*`.
+## Contributing
 
-## Soutenir le projet
+Contributions are welcome:
 
-[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/pierroons)
+1. Fork the repo
+2. Create a branch (`git checkout -b feature/my-feature`)
+3. Commit (`git commit -m "Add my feature"`)
+4. Push (`git push origin feature/my-feature`)
+5. Open a Pull Request
 
-## Licence
+### Translations
 
-GPL-3.0 — voir [LICENSE](LICENSE)
+Add a `app/src/main/res/values-XX/strings.xml` file and translate the `rn2c_*` keys.
 
-Basé sur [Mumla](https://github.com/liblumla/mumla) (GPL-3.0) et [tor-android](https://github.com/nicholasnjr/tor-android) (BSD).
+## License
+
+GPL-3.0 — see [LICENSE](LICENSE)
+
+Based on [Mumla](https://github.com/liblumla/mumla) (GPL-3.0) and [tor-android](https://github.com/nicholasnjr/tor-android) (BSD).
 
 ---
 
-*RN2C — Parce que la liberté d'expression ne devrait jamais dépendre d'un serveur centralisé.*
+*RN2C — Because free speech should never depend on a centralized server.*
