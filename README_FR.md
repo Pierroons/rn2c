@@ -55,6 +55,8 @@ RN2C APK (~55 Mo)
 
 - [Whitepaper (FR)](docs/RN2C_Whitepaper_FR.docx) — Présentation du projet
 - [Documentation technique (FR)](docs/RN2C_Technical_Doc_FR.docx) — Architecture, code, guide dev
+- [Whitepaper (EN)](docs/RN2C_Whitepaper_EN.docx) — Project overview
+- [Technical Documentation (EN)](docs/RN2C_Technical_Doc_EN.docx) — Architecture, code, developer guide
 
 ## État actuel
 
