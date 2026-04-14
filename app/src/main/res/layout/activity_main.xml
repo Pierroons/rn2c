@@ -1,0 +1,125 @@
+<!--
+  ~ Copyright (C) 2014 Andrew Comminos
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Using TweakedAppBarLayout to always have dark themed appbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/rn2c_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            style="@style/TweakedAppBarLayout">
+
+            <!-- The special popupTheme here makes it so popupmenu is will still have a light theme,
+            even though the AppBar has dark. See attrs.xml and themes.xml -->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/rn2c_bg"
+                app:titleTextColor="@color/rn2c_green"
+                app:subtitleTextColor="@color/rn2c_green_dim"
+                app:popupTheme="?attr/popupOverlay"
+                app:title="RN2C"
+                app:subtitle="@string/rn2c_subtitle" />
+
+            <TextView
+                android:id="@+id/version_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/rn2c_green"
+                android:textColor="@color/rn2c_bg"
+                android:textSize="9sp"
+                android:fontFamily="@font/black_ops_one"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:layout_gravity="end" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/rn2c_bg"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <!-- Écran de chargement — par-dessus tout -->
+            <LinearLayout
+                android:id="@+id/rn2c_loading_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/rn2c_bg"
+                android:elevation="10dp">
+
+                <ImageView
+                    android:id="@+id/rn2c_loading_logo"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/rn2c_logo"
+                    android:contentDescription="Logo RN2C"
+                    android:layout_marginBottom="24dp" />
+
+                <ProgressBar
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:indeterminate="true"
+                    android:indeterminateTint="#b040ff"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rn2c_connecting_server"
+                    android:textColor="@color/rn2c_green_dim"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/black_ops_one" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="?colorPrimaryDark"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fitsSystemWindows="false" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

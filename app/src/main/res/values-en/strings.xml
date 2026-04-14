@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- RN2C UI strings (English) -->
+    <string name="rn2c_join_room">Join the room</string>
+    <string name="rn2c_portal">RN2C Portal</string>
+    <string name="rn2c_anonymous">Anonymous</string>
+    <string name="rn2c_voice_changer">Change voice</string>
+    <string name="rn2c_login">Log in</string>
+    <string name="rn2c_username_hint">Username</string>
+    <string name="rn2c_keep_identity">Keep my identity</string>
+    <string name="rn2c_validate">Connect</string>
+    <string name="rn2c_initializing">Initializing…</string>
+    <string name="rn2c_subtitle">Radio Numérique Contre la Censure</string>
+    <string name="rn2c_update_ready">%s ready</string>
+    <string name="rn2c_update_tap_install">Tap to install the update</string>
+    <string name="rn2c_update_available">%s available</string>
+    <string name="rn2c_update_wifi_hint">Connect to WiFi for automatic update</string>
+    <string name="rn2c_update_download_now">Download now</string>
+    <string name="rn2c_update_channel">RN2C Updates</string>
+    <string name="rn2c_name_empty">Name cannot be empty</string>
+    <string name="rn2c_set_rank">Set rank</string>
+    <string name="rn2c_rank_user">User</string>
+    <string name="rn2c_rank_moderator">Moderator</string>
+    <string name="rn2c_rank_admin">Admin</string>
+    <string name="rn2c_rank_title">Rank of %s</string>
+    <string name="rn2c_reset_cert">Reset certificate</string>
+    <string name="rn2c_reset_cert_confirm">Unregister %s?\nThey can reconnect and be re-registered with a new certificate.</string>
+    <string name="rn2c_reset_cert_reason">Certificate reset — please reconnect</string>
+    <string name="rn2c_tor_starting">Starting Tor…</string>
+    <string name="rn2c_connecting_server">Connecting to server…</string>
+    <string name="rn2c_error">Error: %s</string>
+    <string name="rn2c_tor_connected">Connected to Tor network</string>
+    <string name="rn2c_tor_connecting">Connecting to Tor network…</string>
+    <string name="rn2c_tor_stopped">Tor has stopped</string>
+    <string name="rn2c_tor_init">Initializing Tor…</string>
+    <string name="rn2c_update_install">Install update</string>
+    <string name="rn2c_update_downloading">Downloading… %d%%</string>
+    <string name="rn2c_update_title">Update v%s</string>
+    <string name="ptt">PUSH TO TALK</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- RN2C Cyberpunk Theme -->
+    <color name="md_theme_light_primary">#7a9f35</color>
+    <color name="md_theme_light_primary_darker">#5a7a28</color>
+    <color name="md_theme_light_onPrimary">#0a0e14</color>
+
+    <color name="md_theme_dark_primary">#0a0e14</color>
+    <color name="md_theme_dark_primary_lighter">#0d4f1c</color>
+    <color name="md_theme_dark_primary_lighter_more">#7a9f35</color>
+    <color name="md_theme_dark_onPrimary">#7a9f35</color>
+
+    <!-- RN2C palette -->
+    <color name="rn2c_bg">#0a0e14</color>
+    <color name="rn2c_bg_panel">#0d1a0f</color>
+    <color name="rn2c_green">#7a9f35</color>
+    <color name="rn2c_green_dim">#3d5a1a</color>
+    <color name="rn2c_green_text">#a8b88a</color>
+    <color name="rn2c_green_dark">#2a3d12</color>
+    <color name="rn2c_yellow">#8a9a30</color>
+
+    <color name="hot_corner_highlight">#ff7a9f35</color>
+
+    <color name="ripple_talk_state_on">#ff7a9f35</color>
+    <color name="ripple_talk_state_off">#ff0d4f1c</color>
+    <color name="ripple_talk_state_disabled">#ff333333</color>
+    <color name="ripple_talk_state_suppressed">#ffc8ff00</color>
+    <color name="ripple_talk_state_server_muted">#ff003d10</color>
+    <color name="ripple_talk_state_server_deafened">#ff003d10</color>
+
+</resources>
